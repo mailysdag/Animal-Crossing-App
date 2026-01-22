@@ -1,4 +1,4 @@
-ANIMAL CROSSING VILLAGER LIST 
+ANIMAL CROSSING VILLAGER LIST
 Petite application web créée pour apprendre React. Elle permet de voir tous les habitants du jeu Animal Crossing: New Horizons et de gérer ses préférés.
 
 
