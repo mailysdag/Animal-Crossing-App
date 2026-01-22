@@ -3,6 +3,7 @@ ANIMAL CROSSING VILLAGER LIST
 Petite application web créée pour apprendre React. Elle permet de voir tous les habitants du jeu Animal Crossing: New Horizons et de gérer ses préférés.
 
 
+
 CE QUE ÇA FAIT
 * Explorer : Affiche la liste complète des habitants (via l'API Nookipedia).
 
@@ -13,6 +14,8 @@ CE QUE ÇA FAIT
 * Favoris : On peut ajouter des habitants en favoris (sauvegardés dans le navigateur).
 
 
+
+
 OUTILS UTILISÉS
 
 React (avec Vite)
@@ -20,6 +23,8 @@ React (avec Vite)
 CSS
 
 API : Nookipedia API
+
+
 
 
 COMMENT TESTER
