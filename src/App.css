@@ -1,0 +1,333 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+    url('./images/acnhBottom.jpg'),
+    url('./images/acnhTop.jpg');
+  background-position: bottom center, top left;
+  background-repeat: repeat-x, repeat;
+  background-attachment: fixed;
+}
+
+.home-container,
+.details-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial Rounded MT Bold', 'Nunito', sans-serif;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container {
+  justify-content: flex-start;
+}
+
+.details-container {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home-title {
+  text-align: center;
+  color: #8F6135;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 0px white;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  color: #5dac9f;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Arial Rounded MT Bold', 'Nunito', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: pulse-text 1.5s ease-in-out infinite;
+}
+
+.loading::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  border: 6px solid rgba(93, 172, 159, 0.2);
+  border-top-color: #5dac9f;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-text {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.villagers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.villager-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.villager-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #8dd7d2;
+}
+
+.villager-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.villager-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.back-button {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #5dac9f;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.passport-card {
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.passport-photo {
+  background-color: #8dd7d2;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.passport-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.passport-info {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.passport-info h1 {
+  margin-top: 0;
+  color: #555;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.passport-info hr {
+  border: 0;
+  height: 2px;
+  background: #f0f0f0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.passport-info p {
+  font-size: 18px;
+  color: #666;
+  margin: 8px 0;
+}
+
+@media (max-width: 600px) {
+  .passport-card {
+    flex-direction: column;
+  }
+
+  .passport-photo {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5dac9f;
+  padding: 5px 30px;
+  border-bottom: 4px solid #4a8e83;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fdfbf7;
+  font-family: 'Arial Rounded MT Bold', 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.nav-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+.fav-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.3s;
+  font-family: 'Arial Rounded MT Bold', 'Nunito', sans-serif;
+}
+
+.fav-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fav-btn.add {
+  background-color: #5dac9f;
+}
+
+.fav-btn.remove {
+  background-color: #ff6b6b;
+}
+
+.favorites-empty {
+  text-align: center;
+  color: #666;
+  margin-top: 50px;
+}
+
+.favorite-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.remove-btn-small {
+  margin-top: 10px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: 'Arial Rounded MT Bold', 'Nunito', sans-serif;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.remove-btn-small:hover {
+  background-color: #ff5252;
+  transform: scale(1.05);
+}
+
+.search-bar {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: #FFFDF5;
+  color: #5C3A21;
+  border: 2px solid #8F6135;
+}
+
+.search-bar:focus {
+  border-color: #F7E084;
+  box-shadow: 0 0 8px #F7E084;
+}
